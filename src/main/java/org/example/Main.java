@@ -2,6 +2,7 @@ package org.example;
 
 public class Main {
 
+  // Запуск
   public static void main(String[] args) {
     int[] sortArr = {1, 6, 4, 8, 456, 32};
 //   Вызов метода нашей сортировки
@@ -68,7 +69,7 @@ public class Main {
     }
   }
 
-//  Сортировка слиянием
+  //  Сортировка слиянием
   public static int[] mergeSortInner(int[] buffer1, int[] buffer2, int startIndex, int endIndex) {
     if (startIndex >= endIndex - 1) {
       return buffer1;
@@ -93,7 +94,7 @@ public class Main {
     return result;
   }
 
-//  Алгоритм линейного поиска
+  //  Алгоритм линейного поиска
   public static int linearSearch(int arr[], int elementToSearch){
     for (int index = 0; index < arr.length; index++) {
       if (arr[index] == elementToSearch)
