@@ -73,11 +73,9 @@ public class Main {
     if (startIndex >= endIndex - 1) {
       return buffer1;
     }
-
     int middle = startIndex + (endIndex - startIndex) / 2;
     int[] sorted1 = mergeSortInner(buffer1, buffer2, startIndex, middle);
     int[] sorted2 = mergeSortInner(buffer1, buffer2, middle, endIndex);
-
     int index1 = startIndex;
     int index2 = middle;
     int destIndex = startIndex;
@@ -93,5 +91,31 @@ public class Main {
       result[destIndex++] = sorted2[index2++];
     }
     return result;
+  }
+
+//  Алгоритм линейного поиска
+  public static int linearSearch(int arr[], int elementToSearch){
+    for (int index = 0; index < arr.length; index++) {
+      if (arr[index] == elementToSearch)
+        return index;
+    }
+    return -1;
+  }
+
+//  Алгоритм двоичного поиска
+  public static int binarySearch(int arr[], int elementToSearch) {
+    int firstIndex = 0;
+    int lastIndex = arr.length - 1;
+    while(firstIndex <= lastIndex) {
+      int middleIndex = (firstIndex + lastIndex) / 2;
+      if (arr[middleIndex] == elementToSearch) {
+        return middleIndex;
+      }
+      else if (arr[middleIndex] < elementToSearch)
+        firstIndex = middleIndex + 1;
+      else if (arr[middleIndex] > elementToSearch)
+        lastIndex = middleIndex - 1;
+    }
+    return -1;
   }
 }
