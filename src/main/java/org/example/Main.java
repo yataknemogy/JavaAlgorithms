@@ -4,9 +4,12 @@ public class Main {
 
   // Запуск
   public static void main(String[] args) {
-    int[] sortArr = {1, 6, 4, 8, 456, 32};
+    int[] sortArr = {10000, 6, 4, 8, 456, 32};
+    int[] temp = new int[sortArr.length];
+    bubbleSort(sortArr);
+    System.out.println(binarySearch(sortArr, 6));
 //   Вызов метода нашей сортировки
-    quickSort(sortArr, 0, sortArr.length - 1);
+//    quickSort(sortArr, 0, sortArr.length - 1);
     for (int i = 0; i < sortArr.length; i++) {
       System.out.println(sortArr[i]);
     }
@@ -79,25 +82,36 @@ public class Main {
     if (startIndex >= endIndex - 1) {
       return buffer1;
     }
+
     int middle = startIndex + (endIndex - startIndex) / 2;
     int[] sorted1 = mergeSortInner(buffer1, buffer2, startIndex, middle);
     int[] sorted2 = mergeSortInner(buffer1, buffer2, middle, endIndex);
+    int[] result = new int[endIndex - startIndex];
     int index1 = startIndex;
     int index2 = middle;
-    int destIndex = startIndex;
-    int[] result = sorted1 == buffer1 ? buffer2 : buffer1;
+    int destIndex = 0;
+
     while (index1 < middle && index2 < endIndex) {
-      result[destIndex++] = sorted1[index1] < sorted2[index2]
-      ? sorted1[index1++] : sorted2[index2++];
+      if (sorted1[index1] < sorted2[index2]) {
+        result[destIndex++] = sorted1[index1++];
+      } else {
+        result[destIndex++] = sorted2[index2++];
+      }
     }
+
     while (index1 < middle) {
       result[destIndex++] = sorted1[index1++];
     }
+
     while (index2 < endIndex) {
       result[destIndex++] = sorted2[index2++];
     }
-    return result;
+
+    System.arraycopy(result, 0, buffer1, startIndex, endIndex - startIndex);
+
+    return buffer1;
   }
+
 
   //  Алгоритм линейного поиска
   public static int linearSearch(int arr[], int elementToSearch){
