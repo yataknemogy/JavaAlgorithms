@@ -6,7 +6,7 @@ public class Main {
   public static void main(String[] args) {
     int[] sortArr = {1, 6, 4, 8, 456, 32};
 //   Вызов метода нашей сортировки
-    bubbleSort(sortArr);
+    quickSort(sortArr, 0, sortArr.length - 1);
     for (int i = 0; i < sortArr.length; i++) {
       System.out.println(sortArr[i]);
     }
@@ -67,7 +67,12 @@ public class Main {
         j--;
       }
     }
+    if (low < j)
+      quickSort(sortArr, low, j);
+    if (high > i)
+      quickSort(sortArr, i, high);
   }
+
 
   //  Сортировка слиянием
   public static int[] mergeSortInner(int[] buffer1, int[] buffer2, int startIndex, int endIndex) {
@@ -103,7 +108,7 @@ public class Main {
     return -1;
   }
 
-//  Алгоритм двоичного поиска
+  //  Алгоритм двоичного поиска
   public static int binarySearch(int arr[], int elementToSearch) {
     int firstIndex = 0;
     int lastIndex = arr.length - 1;
