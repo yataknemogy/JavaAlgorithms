@@ -25,3 +25,5 @@ Wenn Sie zu diesem Projekt beitragen möchten, lesen Sie bitte die Anleitung zur
 ## Lizenz
 
 Dieses Projekt steht unter der MIT-Lizenz.
+
+[EN](README_EN.MD) | [JP](README_JP.MD)

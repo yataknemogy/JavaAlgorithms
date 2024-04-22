@@ -26,4 +26,4 @@ If you would like to contribute to the project, please read the contribution gui
 
 This project is licensed under the MIT License.
 
-[EN](../README.md)  | [RU](README.md)
+[JP](README_JP.MD) | [DE](README_DE.MD)
