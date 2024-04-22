@@ -26,4 +26,4 @@
 
 Этот проект лицензирован под лицензией MIT License.
 
-[EN](docs/README.md)
+[EN](docs/README_EN.MD) | [JP](docs/README_JP.MD)
