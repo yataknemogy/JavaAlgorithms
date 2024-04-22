@@ -1,6 +1,6 @@
 # Sorting and Searching Algorithms
 
-This project contains implementations of various sorting and searching algorithms in the programming language of your choice. It includes both classic sorting algorithms (bubble sort, selection sort, quick sort, merge sort) and search methods (linear and binary).
+This project contains implementations of various sorting and searching algorithms in the programming language Java. It includes both classic sorting algorithms (bubble sort, selection sort, quick sort, merge sort) and search methods (linear and binary).
 
 ## Sorting Algorithms
 
