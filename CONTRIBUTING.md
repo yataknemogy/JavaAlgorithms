@@ -1,4 +1,4 @@
-# Contributing to BlogWebApplication
+# Contributing to Algoritms
 
 Welcome to the BlogWebApplication project! We're excited to have you on board. Your contributions help make this project better for everyone.
 
@@ -42,6 +42,6 @@ By contributing to this project, you agree to license your contributions under t
 
 ## Contact
 
-If you have any questions or need further assistance, feel free to reach out to us via [email](mailto:example@example.com) or [create an issue](https://github.com/yataknemogy/BlogWebApplication/issues/new).
+If you have any questions or need further assistance, feel free to reach out to us via [create an issue](https://github.com/yataknemogy/Algoritms/issues/new).
 
 Happy contributing!
