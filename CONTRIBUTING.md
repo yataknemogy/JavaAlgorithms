@@ -1,6 +1,6 @@
 # Contributing to Algoritms
 
-Welcome to the Algoritms project! We're excited to have you on board. Your contributions help make this project better for everyone.
+Welcome to the JavaAlgorithms project! We're excited to have you on board. Your contributions help make this project better for everyone.
 
 Before contributing, please take a moment to review the following guidelines.
 
